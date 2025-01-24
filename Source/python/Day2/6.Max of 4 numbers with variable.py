@@ -1,3 +1,5 @@
+
+import dis
 def take_input():
     max_var=0
     variable='a'
@@ -25,9 +27,12 @@ def largest(a,b):
         return b
 
 def main():
-    a,b,c,d,max_var,variable=take_input()
-    print(f"Maximum number among a,b,c,d is : {max_var}")
-    print(f"And the variable is {variable}")
+   # a,b,c,d,max_var,variable=take_input()
+    #take_input()
+    dis.dis(take_input)
+    dis.dis(largest)
+    # print(f"Maximum number among a,b,c,d is : {max_var}")
+    # print(f"And the variable is {variable}")
    # print(ans)
 
 main()
