@@ -1,1 +1,1 @@
-# Capgemini_CMR_Taining-
+# Capgemini_CMR_Training
