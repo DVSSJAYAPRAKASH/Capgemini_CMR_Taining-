@@ -21,8 +21,17 @@ class Employee:
         return self.__salary
     
 salary=int(input("Enter Your Gross Salary: "))
-allowances=int(input("Enter your allowances: "))
-deduction=int(input("Enter Your Deductions: "))
+salary//=12
+medicalallowances=int(input("Enter your Medical allowances: "))
+medicalallowances//=12
+travelallowances=int(input("Enter your Travel allowances: "))
+travelallowances//=12
+allowances=medicalallowances+travelallowances
+pfdeduction=int(input("Enter Your PF Deductions: "))
+pfdeduction//=12
+tdsdeduction=int(input("Enter Your TDS Deductions: "))
+tdsdeduction//=12
+deduction=pfdeduction+tdsdeduction
 emp=Employee("Alice",salary)
 emp.deductions(deduction)
 emp.allowance(allowances)
