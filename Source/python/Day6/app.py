@@ -1,6 +1,6 @@
 class Employee:
     def __init__(self):
-        name,sacdlary,deductions,allowance=self.take_input()
+        name,salary,deductions,allowance=self.take_input()
         self.__name=name
         self.__salary=salary
         self.__salary-=deductions
