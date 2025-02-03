@@ -1,0 +1,43 @@
+from customers import customers
+from orders import orders
+
+class customerandorders:
+    def __init__(self):
+        self.transaction = []
+
+    def add_customer_order(self):
+        while True:
+            add_more = input("Do you want to add a new customer and order? (yes/no): ").strip().lower()
+            if add_more == 'no':
+                return
+            elif add_more == 'yes':
+                new_customer = customers()
+                new_order = orders()
+                customer_order = {
+                    'Customer ID': new_customer.cust_id,
+                    'Customer Name': new_customer.cust_name,
+                    'Customer Address': new_customer.cust_address,
+                    'Order ID': new_order.ordersid,
+                    'Order Status': new_order.orderstatus,
+                    'Order Date': new_order.orderdate
+                }
+                self.transaction.append(customer_order)
+            else:
+                print("Invalid input, please enter 'yes' or 'no'.")
+
+    def display_transactions(self):
+        for transaction in self.transaction:
+            print(f"Customer ID: {transaction['Customer ID']}")
+            print(f"Customer Name: {transaction['Customer Name']}")
+            print(f"Customer Address: {transaction['Customer Address']}")
+            print(f"Order ID: {transaction['Order ID']}")
+            print(f"Order Status: {transaction['Order Status']}")
+            print(f"Order Date: {transaction['Order Date']}")
+            print()
+
+def main():
+    co = customerandorders()
+    co.add_customer_order()
+    co.display_transactions()
+
+main()
